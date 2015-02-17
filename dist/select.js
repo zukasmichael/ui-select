@@ -1004,6 +1004,7 @@
                 return false;
               };
               if (!inputValue) return resultMultiple; //If ngModel was undefined
+              if ($select.tagging.isActivated) return inputValue;
               for (var k = inputValue.length - 1; k >= 0; k--) {
                 if (!checkFnMultiple($select.selected, inputValue[k])){
                   checkFnMultiple(data, inputValue[k]);
